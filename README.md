@@ -28,11 +28,13 @@ mongod -dbpath db
 (This will fail if you skipped step one and db folder is not yet present in your working directory)
 
 Instructions regarding this aplication assume you are using WebStorm as your IDE.
-Navigate to location where routes.js is located and run index.js (while mongodb is running)
+Navigate to location where routes.js is located and run index.js (mongodb should be already up and running)
 
 
 ## Login
 
 As testing credentials use :
+
 user : homer@simpson.com
+
 password : secret
