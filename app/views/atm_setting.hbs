@@ -1,0 +1,31 @@
+{{> mainmenu _id="settings" }}
+
+<section class="ui raised segment">
+    <div class="ui grid">
+        <div class="ui ten wide column">
+            <div class="ui stacked fluid form segment">
+                <form action="/addAtm" method="POST">
+                    <h3 class="ui header">Register</h3>
+
+                    <div class="two fields">
+                        <div class="field">
+                            <label>ATM  Name</label> <input value="{{atm.name}}" type="text" name="name">
+                        </div>
+                        <div class="field">
+                            <label>ATM Category</label> <input value="{{atm.category}}" type="text" name="category">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>ATM Description</label> <input value="{{atm.description}}" type="text" name="description">
+                    </div>
+                    <input type="hidden" value="{{ atm._id }}" name="id"/>
+                    <button class="ui blue submit button">Save</button>
+                </form>
+                {{> error }}
+            </div>
+        </div>
+        <aside class="ui five wide column">
+            <img src="images/btc_atm_3.png" class="ui medium image">
+        </aside>
+    </div>
+</section>
