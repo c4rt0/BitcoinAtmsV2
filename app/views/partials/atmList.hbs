@@ -1,0 +1,31 @@
+<section class="ui raised segment">
+  <div class="ui grid">
+    <aside class="six wide column">
+      <img src="images/btc_atm_2.png" class="ui big image">
+    </aside>
+    <article class="eight wide column">
+      <table class="ui celled table segment">
+        <thead>
+          <tr>
+            <th>ATM Name</th>
+            <th>ATM Category</th>
+            <th>ATM Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each additions}}
+            <tr>
+              <td> {{name}} </td>
+              <td> {{category}} </td>
+              <td> {{description}} </td>
+              <td> <a href="/atmAdit/{{_id}}" uk-icon="icon: edit">Edit</a>      </td>
+              <td> <a href="/atmDelete/{{_id}}" uk-icon="icon: edit">Delete</a>      </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </article>
+  </div>
+</section>

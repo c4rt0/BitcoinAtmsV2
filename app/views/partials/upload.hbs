@@ -1,0 +1,16 @@
+<div class="ui grid">
+    <div class="ui fifteen wide column">
+        <div class="ui fluid form segment">
+            <div class="ui ten wide column">
+                <h5 class="ui header">
+                    <div class="field">Select ATM Image to upload</div>
+                </h5>
+                <form action="/uploadfile" method="POST" enctype="multipart/form-data">
+                    <div class="form">
+                        <input type="file" class="input" name="imagefile" accept="image/png, image/jpeg"> </div>
+                    <p class="item"><input type="submit" value="Upload" class="ui blue submit button"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
