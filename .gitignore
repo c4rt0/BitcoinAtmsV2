@@ -1,3 +1,4 @@
 db/
 .github_token
 .gitlab_token
+/node_modulesß

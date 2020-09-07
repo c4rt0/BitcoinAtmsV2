@@ -38,3 +38,17 @@ As testing credentials use :
 user : homer@simpson.com
 
 password : secret
+
+
+## REQUIREMENTS
+
+POI Core characteristics:
+	- Name
+	- Category
+	- Description
+
+POI Core Service Features:
+	- Signup / login
+	- CRUD
+	- Querry
+	- Groupping into categories
