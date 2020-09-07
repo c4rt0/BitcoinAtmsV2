@@ -14,7 +14,6 @@ module.exports = [
   { method: 'GET', path: '/settings', config: Accounts.showSettings },
   { method: 'POST', path: '/settings', config: Accounts.updateSettings },
 
-
   { method: 'GET', path: '/gallery', config: Gallery.index },
   { method: 'POST', path: '/uploadfile', config: Gallery.uploadFile },
   { method: 'GET', path: '/deleteimage/{id}', config: Gallery.deleteImage },
