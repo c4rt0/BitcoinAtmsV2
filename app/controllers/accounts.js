@@ -8,13 +8,13 @@ const Accounts = {
   index: {
     auth: false,
     handler: function(request, h) {
-      return h.view('main', { title: 'Welcome to Additions' });
+      return h.view('main', { title: "Welcome to Bitcoin ATM's API" });
     }
   },
   showSignup: {
     auth: false,
     handler: function(request, h) {
-      return h.view('signup', { title: 'Sign up for Additions' });
+      return h.view('signup', { title: 'Sign up for API Access' });
     }
   },
   signup: {
@@ -66,7 +66,7 @@ const Accounts = {
   showLogin: {
     auth: false,
     handler: function(request, h) {
-      return h.view('login', { title: 'Login to Additions' });
+      return h.view('login', { title: "Login to Bitcoin ATM's API" });
     }
   },
   login: {
@@ -119,7 +119,7 @@ const Accounts = {
       try {
         const id = request.auth.credentials.id;
         const user = await User.findById(id).lean();
-        return h.view('settings', { title: 'Addition Settings', user: user });
+        return h.view('settings', { title: 'API Settings', user: user });
       } catch (err) {
         return h.view('login', { errors: [{ message: err.message }] });
       }

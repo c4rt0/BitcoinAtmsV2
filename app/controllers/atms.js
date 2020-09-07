@@ -2,14 +2,13 @@
 
 const Addition = require('../models/addition');
 const User = require('../models/user');
-const Candidate = require('../models/atm');
 const Joi = require('@hapi/joi');
 
 
 const Atms = {
   home: {
     handler: async function (request, h) {
-      return h.view('home', { title: 'Make a Addition' });
+      return h.view('home', { title: 'Enjoy using our API!' });
     }
   },
   list: {
@@ -53,7 +52,6 @@ const Atms = {
             name: data.name,
             category: data.category,
             description: data.description,
-            /*        candidate: candidate._id */
           });
           await newAddition.save();
 
