@@ -24,6 +24,7 @@ module.exports = [
   { method: 'GET', path: '/atmAdit/{id}', config: Additions.atmAdit },
   { method: 'GET', path: '/atmDelete/{id}', config: Additions.atmDelete },
 
+
   {
     method: 'GET',
     path: '/{param*}',

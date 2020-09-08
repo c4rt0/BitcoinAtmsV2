@@ -21,7 +21,7 @@
     }
   },
   "atms": {
-    "_model": "Addition",
+    "_model": "Atm",
     "one": {
       "name": "Enniscorthy BTC 1",
       "category": "Bitcoin only",

@@ -28,14 +28,9 @@ const Atms = {
     handler: async function (request, h) {
       try {
 
-        //const id = request.auth.credentials.id;
-        //const user = await User.findById(id);
-
-
         const data = request.payload;
 
         if (data.id) {
-
 
           var atm = await Addition.findById(data.id);
           //console.log(atm);
@@ -48,7 +43,7 @@ const Atms = {
         }
         else {
 
-          const newAddition = new Addition({
+          const newAddition = new Atm({
             name: data.name,
             category: data.category,
             description: data.description,
