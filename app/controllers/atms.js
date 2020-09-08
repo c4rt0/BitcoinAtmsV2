@@ -66,7 +66,7 @@ const Atms = {
 
       var atm = {};
 
-      const additions = await Addition.find().populate('donor').lean();
+      const additions = await Addition.find().populate('atm').lean();
 
       additions.forEach(element => {
         if (element._id == id) {

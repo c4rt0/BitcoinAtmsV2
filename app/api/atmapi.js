@@ -24,6 +24,36 @@ const Candidates = {
         return Boom.notFound('No ATM with this id');
       }
     }
+  },
+  create: {
+    auth: false,
+    handler: async function(request, h) {
+      const newAtm = new Atmz(request.payload);
+      const addition = await newAtm.save();
+      if (atm) {
+        return h.response(addition).code(201);
+      }
+      return Boom.badImplementation('error creating atm');
+    }
+  },
+
+  deleteAll: {
+    auth: false,
+    handler: async function(request, h) {
+      await Atmz.remove({});
+      return { success: true };
+    }
+  },
+
+  deleteOne: {
+    auth: false,
+    handler: async function(request, h) {
+      const addition = await Atmz.remove({ _id: request.params.id });
+      if (addition) {
+        return { success: true };
+      }
+      return Boom.notFound('id not found');
+    }
   }
 };
 
