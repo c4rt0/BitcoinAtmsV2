@@ -5,9 +5,12 @@
 BitcoinsATMsV2 is an expanded in it's functionality adition to previous [repository](https://github.com/c4rt0/BitcoinATMs) of same title (off course without the V2 suffix :D ). The reason for a new repo is the fact that we all learn, and since in my opinion branching on previous version of this API was outrageously inconsistent... here I'm trying to improve on my weak skills.
 This (first) commit is a mirror copy of previous repo, improved only by the quality (as you can tell) of readme.md file.
 
+<<<<<<< HEAD
 ## Heroku 
 
 This aplication is deployed on [HEROKU](https://bitcoin4tms.herokuapp.com/) in case you want to try out it's functionality before downloading.
+=======
+>>>>>>> e47cf20b6d2556c00a554103dd287e0e5fcb2d8b
 
 ## Installation
 
@@ -40,4 +43,8 @@ As testing credentials use :
 
 user : homer@simpson.com
 
+<<<<<<< HEAD
 password : secret
+=======
+password : secret
+>>>>>>> e47cf20b6d2556c00a554103dd287e0e5fcb2d8b
