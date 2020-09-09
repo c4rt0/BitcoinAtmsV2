@@ -21,78 +21,66 @@
     }
   },
   "atms": {
-    "_model": "Addition",
+    "_model": "Atmz",
     "one": {
       "name": "Enniscorthy BTC 1",
       "category": "Bitcoin only",
       "description": "Yellow"
-
     },
     "two": {
       "name": "Enniscorthy BTC 2",
       "category": "Multiple cryptocurrencies",
       "description": "Green"
-
     },
     "three": {
       "name": "Enniscorthy BTC 3",
-      "category": "Bitcoin Only",
+      "category": "Bitcoin only",
       "description": "White"
-
     },
     "four": {
       "name": "Wexford BTC 1",
       "category": "Bitcoin only",
       "description": "Yellow"
-
     },
     "five": {
       "name": "Wexford BTC 2",
       "category": "Multiple cryptocurrencies",
       "description": "Green"
-
     },
     "six": {
       "name": "Wexford BTC 3",
-      "category": "Bitcoin Only",
+      "category": "Bitcoin only",
       "description": "White"
-
     },
     "seven": {
       "name": "Waterford BTC 1",
       "category": "Bitcoin only",
       "description": "Yellow"
-
     },
     "eight": {
       "name": "Waterford BTC 2",
       "category": "Multiple cryptocurrencies",
       "description": "Green"
-
     },
     "nine": {
       "name": "Waterford BTC 3",
-      "category": "Bitcoin Only",
+      "category": "Bitcoin only",
       "description": "White"
-
     },
     "ten": {
       "name": "Dublin BTC 1",
       "category": "Bitcoin only",
       "description": "Yellow"
-
     },
     "eleven": {
       "name": "Dublin BTC 2",
       "category": "Multiple cryptocurrencies",
       "description": "Green"
-
     },
     "twelve": {
       "name": "Dublin BTC 3",
-      "category": "Bitcoin Only",
+      "category": "Bitcoin only",
       "description": "White"
-
     }
   }
 }

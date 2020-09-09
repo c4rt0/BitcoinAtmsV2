@@ -1,1 +1,6 @@
-db/
+.idea
+db
+.github_token
+.gitlab_token
+node_modules
+.nyc_output

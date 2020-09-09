@@ -12,7 +12,6 @@ async function seed() {
   const data = require('./seed-data.json');
   const Addition = require('./addition.js');
   const User = require('./user.js');
-  const atm = require("./atm.js")
   const dbData = await seeder.seed(data, { dropDatabase: false, dropCollections: true });
   // console.log(dbData);
 }

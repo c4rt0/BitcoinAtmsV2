@@ -6,11 +6,17 @@ BitcoinsATMsV2 is an expanded in it's functionality adition to previous [reposit
 This (first) commit is a mirror copy of previous repo, improved only by the quality (as you can tell) of readme.md file.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Heroku 
 
 This aplication is deployed on [HEROKU](https://bitcoin4tms.herokuapp.com/) in case you want to try out it's functionality before downloading.
 =======
 >>>>>>> e47cf20b6d2556c00a554103dd287e0e5fcb2d8b
+=======
+## Heroku 
+
+This aplication is deployed on [HEROKU](https://bitcoin4tms.herokuapp.com/) in case you want to try out it's functionality before downloading.
+>>>>>>> 1-integrate-simple-tests-into-bitcoinatms
 
 ## Installation
 
@@ -47,4 +53,21 @@ user : homer@simpson.com
 password : secret
 =======
 password : secret
+<<<<<<< HEAD
 >>>>>>> e47cf20b6d2556c00a554103dd287e0e5fcb2d8b
+=======
+
+
+## REQUIREMENTS
+
+POI Core characteristics:
+	- Name
+	- Category
+	- Description
+
+POI Core Service Features:
+	- Signup / login
+	- CRUD
+	- Querry
+	- Groupping into categories
+>>>>>>> 1-integrate-simple-tests-into-bitcoinatms
