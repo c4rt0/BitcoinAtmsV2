@@ -35,6 +35,23 @@ const Atmapi = {
       }
       return Boom.badImplementation('error creating candidate');
     }
+  },
+  deleteAll: {
+    auth: false,
+    handler: async function(request, h) {
+      await Atmz.remove({});
+      return { success: true };
+    }
+  },
+  deleteOne: {
+    auth: false,
+    handler: async function(request, h) {
+      const response = await Atmz.deleteOne({ _id: request.params.id });
+      if (response.deletedCount == 1) {
+        return { success: true };
+      }
+      return Boom.notFound('id not found');
+    }
   }
 };
 
