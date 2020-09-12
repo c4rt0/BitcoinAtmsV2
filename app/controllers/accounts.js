@@ -3,18 +3,21 @@
 const User = require('../models/user');
 const Boom = require('@hapi/boom');
 const Joi = require('@hapi/joi');
+const bcrypt = require('bcrypt');          // Use of bcrypt for hashing
+const saltRounds = 10;                     // and salting
+
 
 const Accounts = {
   index: {
     auth: false,
     handler: function(request, h) {
-      return h.view('main', { title: "Welcome to Bitcoin ATM's API" });
+      return h.view('main', { title: 'Welcome to Donations' });
     }
   },
   showSignup: {
     auth: false,
     handler: function(request, h) {
-      return h.view('signup', { title: 'Sign up for API Access' });
+      return h.view('signup', { title: 'Sign up for Donations' });
     }
   },
   signup: {
@@ -49,11 +52,14 @@ const Accounts = {
           const message = 'Email address is already registered';
           throw Boom.badData(message);
         }
+
+        const hash = await bcrypt.hash(payload.password, saltRounds);    // Implemented Salting rounds
+
         const newUser = new User({
           firstName: payload.firstName,
           lastName: payload.lastName,
           email: payload.email,
-          password: payload.password
+          password: hash                                                 // HASHED PASSWORD
         });
         user = await newUser.save();
         request.cookieAuth.set({ id: user.id });
@@ -66,7 +72,7 @@ const Accounts = {
   showLogin: {
     auth: false,
     handler: function(request, h) {
-      return h.view('login', { title: "Login to Bitcoin ATM's API" });
+      return h.view('login', { title: 'Login to Donations' });
     }
   },
   login: {
@@ -99,9 +105,13 @@ const Accounts = {
           const message = 'Email address is not registered';
           throw Boom.unauthorized(message);
         }
-        user.comparePassword(password);
-        request.cookieAuth.set({ id: user.id });
-        return h.redirect('/home');
+        if (!await user.comparePassword(password)) {
+          const message = 'Password mismatch';
+          throw Boom.unauthorized(message);
+        } else {
+          request.cookieAuth.set({ id: user.id });
+          return h.redirect('/home');
+        }
       } catch (err) {
         return h.view('login', { errors: [{ message: err.message }] });
       }
@@ -119,7 +129,7 @@ const Accounts = {
       try {
         const id = request.auth.credentials.id;
         const user = await User.findById(id).lean();
-        return h.view('settings', { title: 'API Settings', user: user });
+        return h.view('settings', { title: 'Donation Settings', user: user });
       } catch (err) {
         return h.view('login', { errors: [{ message: err.message }] });
       }
@@ -156,7 +166,7 @@ const Accounts = {
         user.firstName = userEdit.firstName;
         user.lastName = userEdit.lastName;
         user.email = userEdit.email;
-        user.password = userEdit.password;
+        user.password = userEdit.password;          // EXERCISE -- change this to use bcrypt
         await user.save();
         return h.redirect('/settings');
       } catch (err) {
