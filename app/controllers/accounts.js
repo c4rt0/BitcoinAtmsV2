@@ -6,6 +6,7 @@ const Joi = require('@hapi/joi');
 const bcrypt = require('bcrypt');          // Use of bcrypt for hashing
 const saltRounds = 10;                     // and salting
 
+
 const Accounts = {
   index: {
     auth: false,
