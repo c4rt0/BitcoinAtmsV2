@@ -3,6 +3,7 @@
 const assert = require('chai').assert;
 const AtmService = require('./atmservice');
 const fixtures = require('./fixtures.json');
+const _ = require('lodash');
 
 suite('Atm API tests', function () {
 
@@ -11,16 +12,33 @@ suite('Atm API tests', function () {
 
   const atmService = new AtmService('http://localhost:3000');
 
-  test('create an atm', async function () {
+  //  V3
+  test('Create an atm', async function () {
     const returnedAtm = await atmService.createAtm(newAtm);
-    assert.equal(returnedAtm.name, newAtm.name);
-    assert.equal(returnedAtm.category, newAtm.category);
-    assert.equal(returnedAtm.description, newAtm.description);
+    assert(_.some([returnedAtm], newAtm),  'returnedAtm must be a superset of newAtm');
     assert.isDefined(returnedAtm._id);
   });
 });
 
+  //  V2
+  // test('create a candidate', async function () {
+  //   const returnedAtm = await atmService.createAtm(newAtm);
+  //   assert.equal(returnedAtm, newAtm);
+  //   assert.isDefined(returnedAtm._id);
+  // });
 
+
+  //  V1
+  // test('create an atm', async function () {
+  //   const returnedAtm = await atmService.createAtm(newAtm);
+  //   assert.equal(returnedAtm.name, newAtm.name);
+  //   assert.equal(returnedAtm.category, newAtm.category);
+  //   assert.equal(returnedAtm.description, newAtm.description);
+  //   assert.isDefined(returnedAtm._id);
+  // });
+
+
+  //  V0
 // 'use strict';
 //
 // const assert = require('chai').assert;

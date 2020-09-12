@@ -19,6 +19,7 @@
     "cloudinary": "^1.23.0",
     "dotenv": "^8.2.0",
     "handlebars": "^4.7.6",
+    "loadash": "^1.0.0",
     "mais-mongoose-seeder": "^1.0.7",
     "mongo": "^0.1.0",
     "mongod": "^2.0.0",
