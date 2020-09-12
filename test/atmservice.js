@@ -32,6 +32,7 @@ class AtmService {
     return response.data;
   }
 
+
   async deleteOneAtm(id) {
     const response = await axios.delete(this.baseUrl + '/api/atmapi/' + id);
     return response.data;
