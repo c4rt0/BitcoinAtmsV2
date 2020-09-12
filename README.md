@@ -43,6 +43,7 @@ Instructions regarding this aplication assume you are using WebStorm as your IDE
 Navigate to location where routes.js is located and run index.js (mongodb should be already up and running)
 
 
+
 ## Login
 
 As testing credentials use :
@@ -56,6 +57,7 @@ password : secret
 <<<<<<< HEAD
 >>>>>>> e47cf20b6d2556c00a554103dd287e0e5fcb2d8b
 =======
+
 
 
 ## REQUIREMENTS
