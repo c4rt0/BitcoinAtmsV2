@@ -1,5 +1,5 @@
 {
-  "atm": [
+  "atms": [
     {
       "name": "Enniscorthy BTC 1",
       "category": "Bitcoin only",
@@ -9,56 +9,6 @@
       "name": "Enniscorthy BTC 2",
       "category": "Multiple cryptocurrencies",
       "description": "Green"
-    },
-    {
-      "name": "Enniscorthy BTC 3",
-      "category": "Bitcoin only",
-      "description": "White"
-    },
-    {
-      "name": "Wexford BTC 1",
-      "category": "Bitcoin only",
-      "description": "Yellow"
-    },
-    {
-      "name": "Wexford BTC 2",
-      "category": "Multiple cryptocurrencies",
-      "description": "Green"
-    },
-    {
-      "name": "Wexford BTC 3",
-      "category": "Bitcoin only",
-      "description": "White"
-    },
-    {
-      "name": "Waterford BTC 1",
-      "category": "Bitcoin only",
-      "description": "Yellow"
-    },
-    {
-      "name": "Waterford BTC 2",
-      "category": "Multiple cryptocurrencies",
-      "description": "Green"
-    },
-    {
-      "name": "Waterford BTC 3",
-      "category": "Bitcoin only",
-      "description": "White"
-    },
-    {
-      "name": "Dublin BTC 1",
-      "category": "Bitcoin only",
-      "description": "Yellow"
-    },
-    {
-      "name": "Dublin BTC 2",
-      "category": "Multiple cryptocurrencies",
-      "description": "Green"
-    },
-    {
-      "name": "Dublin BTC 3",
-      "category": "Bitcoin only",
-      "description": "White"
     }
   ],
   "newAtm":
