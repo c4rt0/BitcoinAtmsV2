@@ -45,7 +45,6 @@ As testing credentials use :
 
 user : homer@simpson.com
 
-
 password : secret
 
 
