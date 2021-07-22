@@ -1,6 +1,8 @@
-.idea
-db
+/.idea
+/db
+/node_modules
 .github_token
 .gitlab_token
 node_modules
 .nyc_output
+.env
