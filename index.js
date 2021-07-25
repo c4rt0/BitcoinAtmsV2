@@ -3,6 +3,8 @@
 const Hapi = require('@hapi/hapi');
 const dotenv = require('dotenv');
 const ImageStore = require('./app/utils/image-store');
+const porto = 3000;
+const link = `http:\/\/localhost:${porto}`;
 
 const result = dotenv.config();
 if (result.error) {
@@ -11,7 +13,7 @@ if (result.error) {
 }
 
 const server = Hapi.server({
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || porto,
 });
 
 require('./app/models/db');
@@ -58,7 +60,7 @@ async function init() {
   server.route(require('./routes-api'));
 
   await server.start();
-  console.log(`Server running at: ${server.info.uri}`);
+  console.log(`Server running at: ${link}`);
 }
 
 process.on('unhandledRejection', err => {
