@@ -41,7 +41,7 @@ const Atms = {
         }
         else {
 
-          const newAddition = new Addition({ // Did I had a problem here with "new Atm"
+          const newAddition = new Addition({ // Did I had a problem here with "new Atm" and Atm is not defined ? :D
             name: data.name,
             category: data.category,
             description: data.description,
