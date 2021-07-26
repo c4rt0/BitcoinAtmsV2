@@ -13,7 +13,7 @@ async function seed() {
   const Addition = require('./addition.js');
   const User = require('./user.js');
   const dbData = await seeder.seed(data, { dropDatabase: false, dropCollections: true });
-  // console.log(dbData);
+  console.log(dbData);
 }
 
 Mongoose.connect(process.env.db);

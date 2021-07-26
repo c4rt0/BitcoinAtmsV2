@@ -2,9 +2,8 @@
 
 ## Description
 
-BitcoinsATMsV2 is an expanded in functionality addition to previous [repository](https://github.com/c4rt0/BitcoinATMs) of same title (off course without the V2 suffix :D ). 
+BitcoinsATMsV2 is an expanded in functionality addition to previous [repository](https://github.com/c4rt0/BitcoinATMs) of same title. 
 The reason for a new repo is the fact that we all learn, and since in my opinion branching on previous version of this API was outrageously inconsistent... here I'm trying to improve on my weak (at the time of writing) skills.
-
 
 ## Heroku
 

@@ -9,4 +9,4 @@ const atmSchema = new Schema({
   description: String
 });
 
-module.exports = Mongoose.model('Atmz', atmSchema);
+module.exports = Mongoose.model('Atm', atmSchema);

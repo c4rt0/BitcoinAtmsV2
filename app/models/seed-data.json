@@ -19,9 +19,9 @@
       "email": "bart@simpson.com",
       "password": "$2a$10$uqnPlgyVjBEOtcgMhn/WRO3FwW4T9gX36tTB4RqpGeB/LkCR3YQuO"
     }
-  },
+      },
   "atms": {
-    "_model": "Atmz",
+    "_model": "Atm",
     "one": {
       "name": "Enniscorthy BTC 1",
       "category": "Bitcoin only",

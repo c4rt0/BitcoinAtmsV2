@@ -8,13 +8,13 @@ const Joi = require('@hapi/joi');
 const Atms = {
   home: {
     handler: async function (request, h) {
-      return h.view('home', { title: 'Enjoy using our API!' });
+      return h.view('home', { title: 'Fill up all of the details!' });
     }
   },
   list: {
     handler: async function (request, h) {
       try {
-        const additions = await Addition.find().populate('donor').lean();
+        const additions = await Addition.find().populate('atm').lean(); // was donor, changed to atm
         return h.view('list', {
           title: 'Atms to Date',
           additions: additions
@@ -27,13 +27,11 @@ const Atms = {
   addAtm: {
     handler: async function (request, h) {
       try {
-
         const data = request.payload;
-
+        // console.log("ha: ");
         if (data.id) {
-
           var atm = await Addition.findById(data.id);
-          //console.log(atm);
+          console.log(data.id);
           atm.name = data.name;
           atm.category = data.category;
           atm.description = data.description;
@@ -43,7 +41,7 @@ const Atms = {
         }
         else {
 
-          const newAddition = new Atm({
+          const newAddition = new Addition({ // Did I had a problem here with "new Atm"
             name: data.name,
             category: data.category,
             description: data.description,
@@ -77,7 +75,7 @@ const Atms = {
       return h.view('atm_setting', { atm: atm });
     }
   },
-  /*
+  // from here was uncommented
     validate: {
       payload: {
         name: Joi.string().required(),
@@ -97,7 +95,7 @@ const Atms = {
           .code(400);
       }
     },
-    */
+  // to here
   add_adit_Form: {
     handler: async function (request, h) {
       try {
