@@ -28,10 +28,9 @@ const Atms = {
     handler: async function (request, h) {
       try {
         const data = request.payload;
-        // console.log("ha: ");
         if (data.id) {
           var atm = await Addition.findById(data.id);
-          console.log(data.id);
+          // console.log(data.id);
           atm.name = data.name;
           atm.category = data.category;
           atm.description = data.description;
@@ -75,7 +74,6 @@ const Atms = {
       return h.view('atm_setting', { atm: atm });
     }
   },
-  // from here was uncommented
     validate: {
       payload: {
         name: Joi.string().required(),
@@ -95,13 +93,12 @@ const Atms = {
           .code(400);
       }
     },
-  // to here
   add_adit_Form: {
     handler: async function (request, h) {
       try {
 
         var id = request.params.id
-        console.log(id);
+        // console.log(id);
         /*
         const userEdit = request.payload;
         const id = request.auth.credentials.id;
