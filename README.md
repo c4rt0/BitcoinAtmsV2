@@ -7,10 +7,7 @@ The reason for a new repo is the fact that we all learn, and since in my opinion
 
 ## Heroku
 
-This aplication was deployed on [HEROKU](https://bitcoin4tms.herokuapp.com/) (around June 2020) in case you wanted to try out it's functionality before downloading.
-Now I'm wondering where the heck will I deploy it next? (25/07/2021)
-Obviously there's now much more to my wondering...
-
+This aplication is deployed on [HEROKU](https://bitcoin4tms.herokuapp.com/) 
 ## Installation
 
 1. To install all necessary dependencies run :
